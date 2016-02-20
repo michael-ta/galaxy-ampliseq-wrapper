@@ -17,4 +17,4 @@ samtools index $WORKING_BAM
 echo "running ampliseq rna analysis"
 eval "cd $JOB_WORKING_DIR && $TS_AMPLISEQRNA/run_ampliseqrna.sh -l -O $SUMMARY_FILE $REF_FILE $WORKING_BAM $BED_FILE"
 
-mv "$JOB_WORKING_DIR/tmp.amplicon.cov.xls" "$OUTPUT_FILE"
+mv "$JOB_WORKING_DIR/temp.amplicon.cov.xls" "$OUTPUT_FILE"
