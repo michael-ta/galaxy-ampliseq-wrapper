@@ -15,6 +15,6 @@ samtools index $WORKING_BAM
 
 # run the ampliseq rna workflow script
 echo "running ampliseq rna analysis"
-eval "cd $JOB_WORKING_DIR && $TS_AMPLISEQRNA/run_ampliseqrna.sh -l -O $SUMMARY_FILE $REF_FILE $WORKING_BAM $BED_FILE"
+eval "cd $JOB_WORKING_DIR && $TS_AMPLISEQRNA/run_ampliseqrna.sh -l -O $SUMMARY_FILE $REF_FILE $WORKING_BAM $BED_FILE 2>$1"
 
 mv "$JOB_WORKING_DIR/temp.amplicon.cov.xls" "$OUTPUT_FILE"
